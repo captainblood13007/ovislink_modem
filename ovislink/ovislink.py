@@ -22,7 +22,7 @@ class Ovislink(object):
 
     def connect(self):                
 
-        #self.outputter("connecting... to the modem")
+        
         print "connecting... to the modem"
         try:
             self.tn = telnetlib.Telnet(self.ip, '23' , 5)
@@ -44,7 +44,7 @@ class Ovislink(object):
             print "you are connected"
             print  data, sync
             return " not available ", uptime.group(1)
-            #self.outputter(data, end='')
+            
         except IOError:
             try:
                 self.tn = telnetlib.Telnet(self.ip, '2323' , timeout =5)
@@ -55,7 +55,7 @@ class Ovislink(object):
                 data = self.tn.read_until("> ")
                 print "you are connected"
                 return data
-                #self.outputter(data, end='')
+                
             except IOError:                
                 print "timing out please verify that the modem is connected"
 
@@ -111,6 +111,4 @@ class Ovislink(object):
 
 import telnetlib
 import re
-# obj = Ovislink('10.205.6.204', 'dh9xpfz!')
-# obj.connect()
 
