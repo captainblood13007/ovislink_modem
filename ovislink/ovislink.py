@@ -1,4 +1,4 @@
-#  Copyright (c) 2013, Nicolas Tarral
+#  Copyright (c) 2013, captainblood13007
 #
 #  Ovislink.py is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -7,8 +7,8 @@
 
 """
 
-@author: Nicolas Tarral
-@copyright: (C) 2013  Nicolas Tarral
+@author: captainblood13007
+@copyright: (C) 2013  captainblood13007
 @license: GNU General Public License (GPL)
 """
 
