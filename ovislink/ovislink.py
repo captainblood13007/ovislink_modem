@@ -65,7 +65,7 @@ class Ovislink(object):
         try:
             self.tn.write('adsl info --stats\r\n')
             data = self.tn.read_until("> ")
-            #self.outputter(data, end='')
+            
             return data
         except EOFError:
             print "the telnet session timed out. Please re-connect"
@@ -74,18 +74,17 @@ class Ovislink(object):
 
         self.tn.write('arp show\r\n')
         data = self.tn.read_until(" > ")
-        #self.outputter(data, end='')
+        
         return data
 
     def sh_restart(self):
         self.tn.write('system reboot\r\n')
-        #data = self.tn.read_until("{radadmin}=>")
-        #print data,
+
 
     def sh_route(self):
         self.tn.write('route show\r\n')
         data = self.tn.read_until(" > ")
-        #self.outputter(data, end='')
+        
         return data
 
     def sh_log(self):
@@ -105,7 +104,6 @@ class Ovislink(object):
     def disconnect(self):
     
         self.tn.close()
-        #self.outputter("disconnect from the modem")
         print "disconnect from the modem"
         
 
